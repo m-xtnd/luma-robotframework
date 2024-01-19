@@ -112,8 +112,11 @@ Remove all items from card
     click   link=Remove item
     Set Selenium Implicit Wait    0.2 second
     click   link=Remove item
-    FOR    ${element}    IN    @{article_elements}
-        Click Element    ${delete_item}
+
+    ${count_deleted_items}    Get Element Count    ${delete_item}
+
+    WHILE    ${count_deleted_items} > 0
+        click    ${delete_item}
         Wait Until Page Contains Element    ${${delete_item}}
         Wait Until Page Does Not Contain    ${delete_item}
     END
