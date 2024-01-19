@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+Library    String
 Test Setup    Run Keywords    Open Browser    https://www.google.com/    chrome
 ...    AND    Open    ${BASE_URL}
 ...    AND    Set Selenium Speed  ${SELSPEED}
@@ -23,6 +24,7 @@ testCase
     # Login    ${BASE_URL}    ${EMAIL}    ${PASSWORD}
     Add 4 items
     Count items numbers   4
+    # Check discount
     Remove items from cart
     Count items numbers   2
     Remove all items from card
@@ -121,7 +123,28 @@ Remove all items from card
         Wait Until Page Does Not Contain    ${delete_item}
     END
 
+Check discount
+    Set Selenium Implicit Wait    60 seconds
+    ${total_without_discount}    Get Text    //span[@data-bind="text: getValue(), attr: {'data-th': title}"]
+    ${total_without_discount}    Remove String    ${total_without_discount}    ,    $
+    ${total_without_discount}    Convert To Number    ${total_without_discount}
+    
+    IF    ${total_without_discount} > 200
+        
+        ${total_discount}    Get Text    //td[@data-th='Discount']
+        ${total_discount}    Remove String    ${total_discount}    ,    $
+        ${total_discount}    Convert To Number    ${total_discount}
+        ${total_with_discount}    Get Text    //td[@data-th='Order Total']
+        ${total_with_discount}    Remove String    ${total_with_discount}    ,    $
+        ${total_with_discount}    Convert To Number    ${total_with_discount}
+        ${discount_formula}    Evaluate    ${total_without_discount} - (${total_without_discount} * 0.20)
+        Should Be Equal    ${discount_formula}    ${total_with_discount}
+        Log To Console   Discount applied.
 
+    END
+
+    # Check if the cart is over the number
+    # If yes, it should return a number with the -20%
 
 open
     [Arguments]    ${element}
