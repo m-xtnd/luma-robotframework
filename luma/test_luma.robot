@@ -10,7 +10,7 @@ Test Teardown    Close Browser
 ${BROWSER}   chrome
 ${SELSPEED}  0.5s
 ${BASE_URL}    https://magento.softwaretestingboard.com/
-${EMAIL}    xixixi@xixixi.xixi
+${EMAIL}    xixixi@xixixi.xixi    
 ${PASSWORD}    Password!
 ${expected_total}
 ${delete_item}    link=Remove item
@@ -19,17 +19,18 @@ ${delete_item}    link=Remove item
 
 testCase
     Maximize Browser Window
-    # Create account    ${BASE_URL}    ${EMAIL}    ${PASSWORD}
-    # Logout
-    # Login    ${BASE_URL}    ${EMAIL}    ${PASSWORD}
+    Create account    ${BASE_URL}    ${EMAIL}    ${PASSWORD}
+    Logout
+    Login    ${BASE_URL}    ${EMAIL}    ${PASSWORD}
     Add 4 items
     Count items numbers   4
-    # Check discount
+    # Check discount --- keyword works fine, but 20% isn't applied on the website as advertised
+    # Check free shipping --- not functional yet, path issues
     Remove items from cart
     Count items numbers   2
     Remove all items from card
     Count items numbers    0
-    # Logout
+    Logout
 
 *** Keywords ***
 Create account
@@ -143,8 +144,33 @@ Check discount
 
     END
 
-    # Check if the cart is over the number
-    # If yes, it should return a number with the -20%
+Check free shipping
+    click    xpath=//div[@id='block-shipping']/div
+    Run Keyword And Ignore Error    Scroll Element Into View    //select[@id='DUJYWMW']
+    Select From List By Label  id=XB6YHDR    United States
+    # click    id=DUJYWMW
+    Run Keyword And Ignore Error    Scroll Element Into View    //select[@id='JUK9XIJ']
+    # click    id=JUK9XIJ
+    Select From List By Label    id=JUK9XIJ    Vermont
+    click    id=XA4KV9C
+    type    id=XA4KV9C    12345
+    click    id=s_method_tablerate_bestway
+    ${total_with_discount}    Get Text    //td[@data-th='Order Total']
+    ${total_with_discount}    Remove String    ${total_with_discount}    ,    $
+    ${total_with_discount}    Convert To Number    ${total_with_discount}
+    
+    IF    ${total_with_discount} > 50
+        ${shipping_option_1}    Get Text    //tr[@class='totals shipping excl']//td[@class='amount']
+        ${shipping_option_1}    Remove String    ${shipping_option_1}    ,    $
+        ${shipping_option_1}    Convert To Number    ${shipping_option_1}
+        Should Be Equal    ${shipping_option_1}    0.00
+
+    END
+
+
+
+# _____________________________________________________________________________________________
+
 
 open
     [Arguments]    ${element}
