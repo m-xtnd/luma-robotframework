@@ -9,18 +9,24 @@ Test Teardown    Close Browser
 ${BROWSER}   chrome
 ${SELSPEED}  0.5s
 ${BASE_URL}    https://magento.softwaretestingboard.com/
-${EMAIL}    xixixi@xixixi.xixix
+${EMAIL}    xixixi@xixixi.xixi
 ${PASSWORD}    Password!
+${expected_total}
+${delete_item}    link=Remove item
 
 *** Test Cases ***
 
-testCase_without_accountCreation
+testCase
     Maximize Browser Window
     # Create account    ${BASE_URL}    ${EMAIL}    ${PASSWORD}
     # Logout
     # Login    ${BASE_URL}    ${EMAIL}    ${PASSWORD}
     Add 4 items
+    Count items numbers   4
     Remove items from cart
+    Count items numbers   2
+    Remove all items from card
+    Count items numbers    0
     # Logout
 
 *** Keywords ***
@@ -61,7 +67,7 @@ Add 4 items
     click    xpath=//a[@id='ui-id-4']/span[2]
     click    id=option-label-size-143-item-171
     click    id=option-label-color-93-item-52
-    Set Selenium Implicit Wait    0.5 second
+    Set Selenium Implicit Wait    0.2 second
     click    xpath=//main[@id='maincontent']/div[4]/div/div[2]/div[3]/div/div/ol/li[4]/div/div/div[3]/div/div/form/button/span
     click    xpath=//a[@id='ui-id-5']/span[2]
     click    id=option-label-size-143-item-168
@@ -70,19 +76,49 @@ Add 4 items
     click    xpath=//a[@id='ui-id-6']/span[2]
     click    (//span[@class='ui-menu-icon ui-icon ui-icon-carat-1-e'])[7]
     open    https://magento.softwaretestingboard.com/gear/watches.html
-    Mouse Over    (//img[@alt='Dash Digital Watch'])[1]
+    Mouse Over    //body/div[@class='page-wrapper']/main[@id='maincontent']/div[@class='columns']/div[@class='column main']/div[@class='products wrapper grid products-grid']/ol[@class='products list items product-items']/li[5]/div[1]
+    Set Selenium Implicit Wait    0.2 second
     click    (//span[contains(text(),'Add to Cart')])[5]
-    Mouse Over    (//img[@alt='Endurance Watch'])[1]
-    Set Selenium Implicit Wait    0.5 second
+    Mouse Over    //body/div[@class='page-wrapper']/main[@id='maincontent']/div[@class='columns']/div[@class='column main']/div[@class='products wrapper grid products-grid']/ol[@class='products list items product-items']/li[8]/div[1]
+    Set Selenium Implicit Wait    0.2 second
     click    (//span[contains(text(),'Add to Cart')])[8]
 
 
 Remove items from cart
-    click    .action.showcart
-    click    //button[@id='top-cart-btn-checkout']
+    click    //a[@class='action showcart']
     open    https://magento.softwaretestingboard.com/checkout/cart/
-    click    link=Remove item
-    click    xpath=//table[@id='shopping-cart-table']/tbody[3]/tr[2]/td/div/a[3]
+    click   ${delete_item}
+    Set Selenium Implicit Wait    0.2 second
+    click   ${delete_item}
+
+Count items numbers
+    [Arguments]    ${expected_total}
+    open    https://magento.softwaretestingboard.com/checkout/cart/
+    ${total_quantity}    Set Variable    0
+    ${article_elements}    Get WebElements    xpath=//header[@class='page-header']/div[@class='header content']/div/div/div/div/div/div[4]/ol/li
+
+    FOR    ${element}    IN    @{article_elements}
+        ${quantity}    Get Element Attribute    //header[@class='page-header']/div[@class='header content']/div/div/div/div/div/div[4]/ol/li/div/div/div[@class='product-item-pricing']/div[2]/input    data-item-qty
+        Log    Quantité: ${quantity}
+        ${total_quantity}    Evaluate    ${total_quantity} + int(${quantity})
+    END
+
+    Log    Nombre total d'elements dans le panier: ${total_quantity}
+    Should Be Equal As Numbers    ${total_quantity}    ${expected_total}
+
+Remove all items from card
+    ${article_elements}    Get WebElements    xpath=//header[@class='page-header']/div[@class='header content']/div/div/div/div/div/div[4]/ol/li
+    open    https://magento.softwaretestingboard.com/checkout/cart/
+    click   link=Remove item
+    Set Selenium Implicit Wait    0.2 second
+    click   link=Remove item
+    FOR    ${element}    IN    @{article_elements}
+        Click Element    ${delete_item}
+        Wait Until Page Contains Element    ${${delete_item}}
+        Wait Until Page Does Not Contain    ${delete_item}
+    END
+
+
 
 open
     [Arguments]    ${element}

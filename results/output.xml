@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-01-19T12:24:40.405825" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Test" source="C:\Users\formation\Desktop\robot_test">
+<suite id="s1-s1" name="Luma" source="C:\Users\formation\Desktop\robot_test\luma">
+<suite id="s1-s1-s1" name="Test Luma" source="C:\Users\formation\Desktop\robot_test\luma\test_luma.robot">
+<test id="s1-s1-s1-t1" name="testCase" line="19">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:24:40.604134" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-19T12:24:40.604072" elapsed="3.162524"/>
+</kw>
+<kw name="open">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:24:43.767840" level="INFO">Opening url 'https://magento.softwaretestingboard.com/'</msg>
+<arg>${element}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-19T12:24:43.766596" elapsed="2.409142"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2024-01-19T12:24:43.766596" elapsed="2.409142"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-01-19T12:24:46.175738" elapsed="0.001000"/>
+</kw>
+<arg>Open Browser</arg>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<arg>AND</arg>
+<arg>Open</arg>
+<arg>${BASE_URL}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2024-01-19T12:24:40.602693" elapsed="5.574045"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-19T12:24:46.177162" elapsed="0.617697"/>
+</kw>
+<kw name="Add 4 items">
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:24:46.802073" level="INFO">Clicking element 'xpath=//a[@id='ui-id-4']/span[2]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:24:46.800074" elapsed="2.422264"/>
+</kw>
+<arg>xpath=//a[@id='ui-id-4']/span[2]</arg>
+<status status="PASS" start="2024-01-19T12:24:46.798069" elapsed="2.424850"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:24:49.224995" level="INFO">Clicking element 'id=option-label-size-143-item-171'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:24:49.223998" elapsed="1.090799"/>
+</kw>
+<arg>id=option-label-size-143-item-171</arg>
+<status status="PASS" start="2024-01-19T12:24:49.222919" elapsed="1.092915"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:24:50.320816" level="INFO">Clicking element 'id=option-label-color-93-item-52'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:24:50.319828" elapsed="1.079050"/>
+</kw>
+<arg>id=option-label-color-93-item-52</arg>
+<status status="PASS" start="2024-01-19T12:24:50.316827" elapsed="1.083105"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>0.2 second</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-01-19T12:24:51.399932" elapsed="0.506106"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:24:51.910712" level="INFO">Clicking element 'xpath=//main[@id='maincontent']/div[4]/div/div[2]/div[3]/div/div/ol/li[4]/div/div/div[3]/div/div/form/button/span'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:24:51.909708" elapsed="3.096286"/>
+</kw>
+<arg>xpath=//main[@id='maincontent']/div[4]/div/div[2]/div[3]/div/div/ol/li[4]/div/div/div[3]/div/div/form/button/span</arg>
+<status status="PASS" start="2024-01-19T12:24:51.907707" elapsed="3.098287"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:24:55.009053" level="INFO">Clicking element 'xpath=//a[@id='ui-id-5']/span[2]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:24:55.008053" elapsed="2.049985"/>
+</kw>
+<arg>xpath=//a[@id='ui-id-5']/span[2]</arg>
+<status status="PASS" start="2024-01-19T12:24:55.007055" elapsed="2.050983"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:24:57.062103" level="INFO">Clicking element 'id=option-label-size-143-item-168'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:24:57.061111" elapsed="1.114685"/>
+</kw>
+<arg>id=option-label-size-143-item-168</arg>
+<status status="PASS" start="2024-01-19T12:24:57.059120" elapsed="1.117240"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:24:58.183471" level="INFO">Clicking element 'id=option-label-color-93-item-52'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:24:58.180473" elapsed="1.113625"/>
+</kw>
+<arg>id=option-label-color-93-item-52</arg>
+<status status="PASS" start="2024-01-19T12:24:58.178422" elapsed="1.115676"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:24:59.298147" level="INFO">Clicking element 'xpath=//main[@id='maincontent']/div[4]/div/div[2]/div[3]/div/div/ol/li/div/div/div[3]/div/div/form/button/span'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:24:59.297139" elapsed="2.976862"/>
+</kw>
+<arg>xpath=//main[@id='maincontent']/div[4]/div/div[2]/div[3]/div/div/ol/li/div/div/div[3]/div/div/form/button/span</arg>
+<status status="PASS" start="2024-01-19T12:24:59.295182" elapsed="2.978819"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:02.275019" level="INFO">Clicking element 'xpath=//a[@id='ui-id-6']/span[2]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:02.274001" elapsed="2.261831"/>
+</kw>
+<arg>xpath=//a[@id='ui-id-6']/span[2]</arg>
+<status status="PASS" start="2024-01-19T12:25:02.274001" elapsed="2.261831"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:04.538852" level="INFO">Clicking element '(//span[@class='ui-menu-icon ui-icon ui-icon-carat-1-e'])[7]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:04.537901" elapsed="2.480127"/>
+</kw>
+<arg>(//span[@class='ui-menu-icon ui-icon ui-icon-carat-1-e'])[7]</arg>
+<status status="PASS" start="2024-01-19T12:25:04.536900" elapsed="2.482284"/>
+</kw>
+<kw name="open">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:07.023973" level="INFO">Opening url 'https://magento.softwaretestingboard.com/gear/watches.html'</msg>
+<arg>${element}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-19T12:25:07.022893" elapsed="1.874640"/>
+</kw>
+<arg>https://magento.softwaretestingboard.com/gear/watches.html</arg>
+<status status="PASS" start="2024-01-19T12:25:07.020102" elapsed="1.877431"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:08.898562" level="INFO">Simulating Mouse Over on element '//body/div[@class='page-wrapper']/main[@id='maincontent']/div[@class='columns']/div[@class='column main']/div[@class='products wrapper grid products-grid']/ol[@class='products list items product-items']/li[5]/div[1]'.</msg>
+<arg>//body/div[@class='page-wrapper']/main[@id='maincontent']/div[@class='columns']/div[@class='column main']/div[@class='products wrapper grid products-grid']/ol[@class='products list items product-items']/li[5]/div[1]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:08.898562" elapsed="1.334215"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>0.2 second</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-01-19T12:25:10.234101" elapsed="0.505303"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:10.741947" level="INFO">Clicking element '(//span[contains(text(),'Add to Cart')])[5]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:10.740950" elapsed="1.155854"/>
+</kw>
+<arg>(//span[contains(text(),'Add to Cart')])[5]</arg>
+<status status="PASS" start="2024-01-19T12:25:10.739929" elapsed="1.156875"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:11.899530" level="INFO">Simulating Mouse Over on element '//body/div[@class='page-wrapper']/main[@id='maincontent']/div[@class='columns']/div[@class='column main']/div[@class='products wrapper grid products-grid']/ol[@class='products list items product-items']/li[8]/div[1]'.</msg>
+<arg>//body/div[@class='page-wrapper']/main[@id='maincontent']/div[@class='columns']/div[@class='column main']/div[@class='products wrapper grid products-grid']/ol[@class='products list items product-items']/li[8]/div[1]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:11.898430" elapsed="1.336326"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>0.2 second</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-01-19T12:25:13.235818" elapsed="0.505136"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:13.745021" level="INFO">Clicking element '(//span[contains(text(),'Add to Cart')])[8]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:13.743536" elapsed="1.167674"/>
+</kw>
+<arg>(//span[contains(text(),'Add to Cart')])[8]</arg>
+<status status="PASS" start="2024-01-19T12:25:13.741604" elapsed="1.169606"/>
+</kw>
+<status status="PASS" start="2024-01-19T12:24:46.797021" elapsed="28.115237"/>
+</kw>
+<kw name="Count items numbers">
+<kw name="open">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:14.918361" level="INFO">Opening url 'https://magento.softwaretestingboard.com/checkout/cart/'</msg>
+<arg>${element}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-19T12:25:14.917363" elapsed="4.293603"/>
+</kw>
+<arg>https://magento.softwaretestingboard.com/checkout/cart/</arg>
+<status status="PASS" start="2024-01-19T12:25:14.915318" elapsed="4.296163"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-01-19T12:25:19.213013" level="INFO">${total_quantity} = 0</msg>
+<var>${total_quantity}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-01-19T12:25:19.211995" elapsed="0.001018"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:19.748188" level="INFO">${article_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="33ad95582533112bc7dbe957c164b9cc", element="668DA20ED0759382C4814BD4F687CDB7_element_218")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${article_elements}</var>
+<arg>xpath=//header[@class='page-header']/div[@class='header content']/div/div/div/div/div/div[4]/ol/li</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:19.214012" elapsed="0.534176"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:20.856116" level="INFO">${quantity} = 1</msg>
+<var>${quantity}</var>
+<arg>//header[@class='page-header']/div[@class='header content']/div/div/div/div/div/div[4]/ol/li/div/div/div[@class='product-item-pricing']/div[2]/input</arg>
+<arg>data-item-qty</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:19.752213" elapsed="1.103903"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-19T12:25:20.859175" level="INFO">Quantité: 1</msg>
+<arg>Quantité: ${quantity}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-19T12:25:20.857215" elapsed="0.003929"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-01-19T12:25:20.864641" level="INFO">${total_quantity} = 1</msg>
+<var>${total_quantity}</var>
+<arg>${total_quantity} + int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-01-19T12:25:20.862166" elapsed="0.003494"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="33ad95582533112bc7dbe957c164b9cc", element="668DA20ED0759382C4814BD4F687CDB7_element_218")&gt;</var>
+<status status="PASS" start="2024-01-19T12:25:19.751216" elapsed="1.114444"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:21.945792" level="INFO">${quantity} = 1</msg>
+<var>${quantity}</var>
+<arg>//header[@class='page-header']/div[@class='header content']/div/div/div/div/div/div[4]/ol/li/div/div/div[@class='product-item-pricing']/div[2]/input</arg>
+<arg>data-item-qty</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:20.867644" elapsed="1.079200"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-19T12:25:21.949840" level="INFO">Quantité: 1</msg>
+<arg>Quantité: ${quantity}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-19T12:25:21.947836" elapsed="0.002988"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-01-19T12:25:21.954393" level="INFO">${total_quantity} = 2</msg>
+<var>${total_quantity}</var>
+<arg>${total_quantity} + int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-01-19T12:25:21.951821" elapsed="0.004227"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="33ad95582533112bc7dbe957c164b9cc", element="668DA20ED0759382C4814BD4F687CDB7_element_219")&gt;</var>
+<status status="PASS" start="2024-01-19T12:25:20.866663" elapsed="1.089385"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:23.023293" level="INFO">${quantity} = 1</msg>
+<var>${quantity}</var>
+<arg>//header[@class='page-header']/div[@class='header content']/div/div/div/div/div/div[4]/ol/li/div/div/div[@class='product-item-pricing']/div[2]/input</arg>
+<arg>data-item-qty</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:21.958080" elapsed="1.065578"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-19T12:25:23.026343" level="INFO">Quantité: 1</msg>
+<arg>Quantité: ${quantity}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-19T12:25:23.024797" elapsed="0.002542"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-01-19T12:25:23.029367" level="INFO">${total_quantity} = 3</msg>
+<var>${total_quantity}</var>
+<arg>${total_quantity} + int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-01-19T12:25:23.028326" elapsed="0.001041"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="33ad95582533112bc7dbe957c164b9cc", element="668DA20ED0759382C4814BD4F687CDB7_element_220")&gt;</var>
+<status status="PASS" start="2024-01-19T12:25:21.957079" elapsed="1.072288"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:24.077046" level="INFO">${quantity} = 1</msg>
+<var>${quantity}</var>
+<arg>//header[@class='page-header']/div[@class='header content']/div/div/div/div/div/div[4]/ol/li/div/div/div[@class='product-item-pricing']/div[2]/input</arg>
+<arg>data-item-qty</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:23.030370" elapsed="1.047312"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-19T12:25:24.080766" level="INFO">Quantité: 1</msg>
+<arg>Quantité: ${quantity}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-19T12:25:24.078774" elapsed="0.002958"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-01-19T12:25:24.085082" level="INFO">${total_quantity} = 4</msg>
+<var>${total_quantity}</var>
+<arg>${total_quantity} + int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-01-19T12:25:24.082709" elapsed="0.002373"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="33ad95582533112bc7dbe957c164b9cc", element="668DA20ED0759382C4814BD4F687CDB7_element_221")&gt;</var>
+<status status="PASS" start="2024-01-19T12:25:23.030370" elapsed="1.055776"/>
+</iter>
+<var>${element}</var>
+<value>@{article_elements}</value>
+<status status="PASS" start="2024-01-19T12:25:19.749216" elapsed="4.336930"/>
+</for>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-19T12:25:24.088146" level="INFO">Nombre total d'elements dans le panier: 4</msg>
+<arg>Nombre total d'elements dans le panier: ${total_quantity}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-19T12:25:24.086146" elapsed="0.002994"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-01-19T12:25:24.091089" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${total_quantity}</arg>
+<arg>${expected_total}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-01-19T12:25:24.089140" elapsed="0.002955"/>
+</kw>
+<arg>4</arg>
+<status status="PASS" start="2024-01-19T12:25:14.913711" elapsed="9.179434"/>
+</kw>
+<kw name="Remove items from cart">
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:24.099289" level="INFO">Clicking element '//a[@class='action showcart']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:24.098238" elapsed="1.171841"/>
+</kw>
+<arg>//a[@class='action showcart']</arg>
+<status status="PASS" start="2024-01-19T12:25:24.097286" elapsed="1.172793"/>
+</kw>
+<kw name="open">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:25.271110" level="INFO">Opening url 'https://magento.softwaretestingboard.com/checkout/cart/'</msg>
+<arg>${element}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-19T12:25:25.271110" elapsed="2.853505"/>
+</kw>
+<arg>https://magento.softwaretestingboard.com/checkout/cart/</arg>
+<status status="PASS" start="2024-01-19T12:25:25.270079" elapsed="2.854904"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:28.128209" level="INFO">Clicking element 'link=Remove item'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:28.127209" elapsed="3.694552"/>
+</kw>
+<arg>${delete_item}</arg>
+<status status="PASS" start="2024-01-19T12:25:28.126074" elapsed="3.696710"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>0.2 second</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-01-19T12:25:31.822784" elapsed="0.505170"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:32.331987" level="INFO">Clicking element 'link=Remove item'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:32.330947" elapsed="3.681586"/>
+</kw>
+<arg>${delete_item}</arg>
+<status status="PASS" start="2024-01-19T12:25:32.328993" elapsed="3.683540"/>
+</kw>
+<status status="PASS" start="2024-01-19T12:25:24.095199" elapsed="11.917334"/>
+</kw>
+<kw name="Count items numbers">
+<kw name="open">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:36.015546" level="INFO">Opening url 'https://magento.softwaretestingboard.com/checkout/cart/'</msg>
+<arg>${element}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-19T12:25:36.015546" elapsed="2.268306"/>
+</kw>
+<arg>https://magento.softwaretestingboard.com/checkout/cart/</arg>
+<status status="PASS" start="2024-01-19T12:25:36.014546" elapsed="2.269306"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-01-19T12:25:38.284925" level="INFO">${total_quantity} = 0</msg>
+<var>${total_quantity}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-01-19T12:25:38.283852" elapsed="0.001618"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:38.806135" level="INFO">${article_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="33ad95582533112bc7dbe957c164b9cc", element="B16CAB4D618E3E47FB61AD12D4A4C055_element_329")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${article_elements}</var>
+<arg>xpath=//header[@class='page-header']/div[@class='header content']/div/div/div/div/div/div[4]/ol/li</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:38.285470" elapsed="0.520665"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:39.893068" level="INFO">${quantity} = 1</msg>
+<var>${quantity}</var>
+<arg>//header[@class='page-header']/div[@class='header content']/div/div/div/div/div/div[4]/ol/li/div/div/div[@class='product-item-pricing']/div[2]/input</arg>
+<arg>data-item-qty</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:38.810274" elapsed="1.084067"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-19T12:25:39.896292" level="INFO">Quantité: 1</msg>
+<arg>Quantité: ${quantity}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-19T12:25:39.894650" elapsed="0.003668"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-01-19T12:25:39.901331" level="INFO">${total_quantity} = 1</msg>
+<var>${total_quantity}</var>
+<arg>${total_quantity} + int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-01-19T12:25:39.899324" elapsed="0.003015"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="33ad95582533112bc7dbe957c164b9cc", element="B16CAB4D618E3E47FB61AD12D4A4C055_element_329")&gt;</var>
+<status status="PASS" start="2024-01-19T12:25:38.809163" elapsed="1.094176"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:40.952736" level="INFO">${quantity} = 1</msg>
+<var>${quantity}</var>
+<arg>//header[@class='page-header']/div[@class='header content']/div/div/div/div/div/div[4]/ol/li/div/div/div[@class='product-item-pricing']/div[2]/input</arg>
+<arg>data-item-qty</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:39.906611" elapsed="1.047173"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-19T12:25:40.956379" level="INFO">Quantité: 1</msg>
+<arg>Quantité: ${quantity}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-19T12:25:40.954212" elapsed="0.006174"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-01-19T12:25:40.962386" level="INFO">${total_quantity} = 2</msg>
+<var>${total_quantity}</var>
+<arg>${total_quantity} + int(${quantity})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-01-19T12:25:40.960386" elapsed="0.003401"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="33ad95582533112bc7dbe957c164b9cc", element="B16CAB4D618E3E47FB61AD12D4A4C055_element_330")&gt;</var>
+<status status="PASS" start="2024-01-19T12:25:39.904901" elapsed="1.058886"/>
+</iter>
+<var>${element}</var>
+<value>@{article_elements}</value>
+<status status="PASS" start="2024-01-19T12:25:38.807234" elapsed="2.156553"/>
+</for>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-19T12:25:40.967563" level="INFO">Nombre total d'elements dans le panier: 2</msg>
+<arg>Nombre total d'elements dans le panier: ${total_quantity}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-19T12:25:40.965478" elapsed="0.003042"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-01-19T12:25:40.971563" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${total_quantity}</arg>
+<arg>${expected_total}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-01-19T12:25:40.969507" elapsed="0.002056"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2024-01-19T12:25:36.013584" elapsed="4.958982"/>
+</kw>
+<kw name="Remove all items from card">
+<kw name="open">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:40.979686" level="INFO">Opening url 'https://magento.softwaretestingboard.com/checkout/cart/'</msg>
+<arg>${element}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-19T12:25:40.978691" elapsed="2.830684"/>
+</kw>
+<arg>https://magento.softwaretestingboard.com/checkout/cart/</arg>
+<status status="PASS" start="2024-01-19T12:25:40.977625" elapsed="2.832322"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:43.811018" level="INFO">Clicking element 'link=Remove item'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:43.811018" elapsed="3.541235"/>
+</kw>
+<arg>link=Remove item</arg>
+<status status="PASS" start="2024-01-19T12:25:43.809947" elapsed="3.542306"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>0.2 second</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-01-19T12:25:47.353732" elapsed="0.505410"/>
+</kw>
+<kw name="click">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:47.860401" level="INFO">Clicking element 'link=Remove item'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T12:25:47.860401" elapsed="3.353828"/>
+</kw>
+<arg>link=Remove item</arg>
+<status status="PASS" start="2024-01-19T12:25:47.859142" elapsed="3.356192"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T12:25:51.219528" level="INFO">Clicking element 'link=Remove item'.</msg>
+<msg time="2024-01-19T12:25:52.629596" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-01-19T12:25:52.630642" level="FAIL">Element with locator 'link=Remove item' not found.</msg>
+<arg>${delete_item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-01-19T12:25:51.218496" elapsed="1.419703">Element with locator 'link=Remove item' not found.</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${${delete_item}}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-01-19T12:25:52.638199" elapsed="0.001049"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" owner="SeleniumLibrary">
+<arg>${delete_item}</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="NOT RUN" start="2024-01-19T12:25:52.639248" elapsed="0.000000"/>
+</kw>
+<var name="${index}">0</var>
+<status status="FAIL" start="2024-01-19T12:25:51.217366" elapsed="1.421882">Element with locator 'link=Remove item' not found.</status>
+</iter>
+<var>${index}</var>
+<value>2</value>
+<status status="FAIL" start="2024-01-19T12:25:51.215334" elapsed="1.424912">Element with locator 'link=Remove item' not found.</status>
+</for>
+<status status="FAIL" start="2024-01-19T12:25:40.974964" elapsed="11.665282">Element with locator 'link=Remove item' not found.</status>
+</kw>
+<kw name="Count items numbers">
+<arg>0</arg>
+<status status="NOT RUN" start="2024-01-19T12:25:52.641257" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-19T12:25:52.643260" elapsed="2.948745"/>
+</kw>
+<status status="FAIL" start="2024-01-19T12:24:40.601695" elapsed="74.991609">Element with locator 'link=Remove item' not found.</status>
+</test>
+<status status="FAIL" start="2024-01-19T12:24:40.436708" elapsed="75.159208"/>
+</suite>
+<status status="FAIL" start="2024-01-19T12:24:40.433162" elapsed="75.165752"/>
+</suite>
+<status status="FAIL" start="2024-01-19T12:24:40.410360" elapsed="75.191557"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robot Test">Robot Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Luma">Robot Test.Luma</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Test Luma">Robot Test.Luma.Test Luma</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
